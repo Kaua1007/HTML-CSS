@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display+SC&display=swap');
+
+/*
+font-family: "Cinzel", serif; - titulos
+
+  font-family: "Playfair Display SC", serif; -h2
+
+  font-family: "lora", serif;
+*/
+/* Mais fraco para Mais escuro
+#F8F8F8
+#C9A66B
+#5C4033
+#333333
+#0A0A0A
+
+root é tipo um endereço mais facil para cores e fontes
+*/
+
+/* =====================================================================
+   Reset global: Remove margens e preenchimentos padrão dos elementos
+===================================================================== */
+* {
+    margin: 0; /* Remove todas as margens externas dos elementos */
+    padding: 0; /* Remove todo o preenchimento interno dos elementos */
+}
+
+/* =====================================================================
+   Variáveis globais: Definem cores e fontes reutilizáveis
+===================================================================== */
+:root {
+    --cor01: #F8F8F8; /* Cor branca gelo, usada para textos claros */
+    --cor02: #D6B56B; /* Cor dourada suave, usada para destaques */
+    --cor03: #5C4033; /* Marrom carvalho, usado para detalhes */
+    --cor04: #333333; /* Cinza chumbo, usado no fundo */
+    --cor05: #0A0A0A; /* Preto fosco, usado em rodapés e menus */
+
+    --fonte-titulos: "Cinzel", serif; /* Fonte clássica para títulos principais */
+    --fonte-h2: "Playfair Display SC", serif; /* Fonte elegante para subtítulos */
+    --fonte-textos: "Lora", serif; /* Fonte confortável para textos longos */
+}
+
+/* =====================================================================
+   Estilização geral do corpo da página
+===================================================================== */
+body {
+    background-color: var(--cor04); /* Define cor de fundo da página (cinza escuro) */
+    font-family: var(--fonte-titulos); /* Fonte padrão inicial para o site */
+}
+
+/* =====================================================================
+   Estilos para o cabeçalho (header)
+===================================================================== */
+header {
+    background-image: linear-gradient(to bottom, var(--cor04), var(--cor05)); /* Cria um degradê do cinza escuro para o preto */
+    min-height: 150px; /* Altura mínima do cabeçalho */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    padding-top: 30px; /* Espaço interno superior */
+}
+
+/* Título principal dentro do cabeçalho */
+header > h1 {
+    color: var(--cor01); /* Cor do texto (branco gelo) */
+    font-family: var(--fonte-titulos); /* Fonte específica para o título */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    font-size: 3em; /* Tamanho da fonte do título */
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.212); /* Sombra branca semi-transparente para dar destaque */
+}
+
+/* Parágrafo dentro do cabeçalho */
+header > p {
+    color: var(--cor01); /* Cor do parágrafo (branco gelo) */
+    font-family: var(--fonte-h2); /* Fonte específica para subtítulos */
+    max-height: 500px; /* Altura máxima do parágrafo */
+    margin: auto; /* Centraliza o parágrafo */
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.285); /* Sombra clara para realce */
+}
+
+/* =====================================================================
+   Estilos para a barra de navegação (nav)
+===================================================================== */
+nav {
+    background-color: var(--cor05); /* Fundo preto fosco */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0px 0px 10px #0a0a0a99; /* Sombra ao redor para profundidade */
+}
+
+/* Links dentro do nav */
+nav > a {
+    color: var(--cor01); /* Cor dos links (branco gelo) */
+    padding: 10px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+/* Efeitos ao passar o mouse sobre os links */
+nav > a:hover {
+    background-color: var(--cor04); /* Cor de fundo ao passar o mouse (cinza chumbo) */
+    color: var(--cor02); /* Cor do texto muda para dourado */
+    transition-duration: .5s; /* Tempo de transição suave para o efeito */
+    padding: 5px; /* Reduz levemente o espaçamento ao passar o mouse */
+}
+
+/* =====================================================================
+   Estilos da área principal do site (main)
+===================================================================== */
+main {
+    background-color: white; /* Fundo branco para a área principal */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Arredonda os cantos */
+    box-shadow: 0px 0px 10px #0a0a0a99; /* Sombra para destaque visual */
+    min-width: 320px; /* Largura mínima (ótimo para mobile) */
+    max-width: 800px; /* Largura máxima para limitar crescimento */
+    margin: auto; /* Centraliza o main na página */
+    margin-bottom: 10px; /* Espaço abaixo da main */
+    margin-top: 10px; /* Espaço acima da main */
+}
+
+/* Estilização dos parágrafos dentro da main */
+main p {
+    margin: 15px 0px; /* Espaçamento vertical entre parágrafos */
+    text-align: justify; /* Texto alinhado dos dois lados */
+    text-indent: 30px; /* Recuo na primeira linha */
+    line-height: 1em; /* Altura da linha */
+}
+
+/* Destaque para textos importantes */
+strong {
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 2px 6px; /* Espaço interno ao redor do texto */
+}
+
+/* Imagens dentro do main */
+img {
+    width: 100%; /* Imagens sempre ocupam 100% da largura disponível */
+}
+
+/* Ajuste do iframe */
+iframe {
+    margin: auto; /* Centraliza o iframe */
+}
+
+/* Título h1 específico dentro do conteúdo principal */
+main h1 {
+    background-color: var(--cor01); /* Fundo branco gelo */
+    font-family: var(--fonte-titulos); /* Fonte clássica para h1 */
+}
+
+/* Subtítulos h2 dentro do main */
+main h2 {
+    background-color: var(--cor01); /* Fundo branco gelo */
+    font-family: var(--fonte-h2); /* Fonte elegante para h2 */
+    font-size: 1.3em; /* Tamanho da fonte dos subtítulos */
+    background-image: linear-gradient(to right, var(--cor02), transparent); /* Degradê dourado que vai se apagando */
+}
+
+/* Links dentro da main */
+main a {
+    font-weight: bold; /* Deixa os links em negrito */
+    padding: 2px 6px; /* Espaço interno dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: var(--cor05); /* Cor do texto preto fosco */
+}
+
+/* Efeito hover nos links da main */
+main a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    color: var(--cor01); /* Muda cor do link para branco gelo */
+    background-color: var(--cor05); /* Fundo preto no hover */
+}
+
+/* =====================================================================
+   Estilos para o rodapé (footer)
+===================================================================== */
+footer {
+    background-color: var(--cor05); /* Fundo preto fosco */
+    color: var(--cor01); /* Texto branco gelo */
+    text-align: center; /* Centraliza o texto */
+    font-size: 0.4em; /* Fonte pequena */
+    padding: 5px; /* Espaçamento interno */
+}
+
+/* =====================================================================
+   Estilização de container para vídeos responsivos
+===================================================================== */
+div.video {
+    background-color: var(--cor05); /* Fundo preto para o container do vídeo */
+    margin: 0px -20px 30px -20px; /* Negativo para encostar nas bordas */
+    padding: 20px; /* Espaçamento interno do container */
+    padding-bottom: 58%; /* Proporção de altura para manter aspecto do vídeo */
+    position: relative; /* Necessário para posicionar o iframe corretamente */
+}
+
+/* Estilização específica do iframe dentro da div.video */
+div.video > iframe {
+    position: absolute; /* Posiciona o iframe sobre a div */
+    top: 5%; /* Distância do topo */
+    left: 5%; /* Distância da esquerda */
+    width: 90%; /* Largura do iframe proporcional ao container */
+    height: 90%; /* Altura proporcional ao container */
+}

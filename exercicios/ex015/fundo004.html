@@ -3,26 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
-        body{
-            height: 100vh;
+body {
+    height: 100vh; /*Define a altura do body como 100% da altura da tela (viewport height)*/
 
-            background-color: black;
-            background-image: url('imagens/wallpaper002.jpg');
-            background-position: center center;
-            background-repeat: repeat-y;
-            background-size: cover;
-        }
+    /*background-color: black; /* Cor de fundo preta (usada como base se a imagem não carregar)
 
-        main {
-            background-color: white;
-            width: 400px;
-            padding: 10px;
-            margin: auto;
-            border-radius: 15px;
-            border: 1px solid darkblue;
-        }
+    background-image: url('imagens/wallpaper002.jpg'); /* Define uma imagem de fundo 
+
+    background-position: center center; /* Centraliza a imagem tanto horizontal quanto verticalmente 
+
+    background-repeat: repeat-y; /* Repete a imagem apenas no eixo vertical (de cima para baixo) 
+
+    background-size: cover; /* Faz a imagem de fundo cobrir todo o espaço do body proporcionalmente 
+
+    background-attachment: fixed; /* Fixa a imagem de fundo para que ela não role com o conteúdo
+
+    Shorthand-background
+        color > image > position > repeat > {size} > attachment 
+    */
+
+    background: black url('imagens/wallpaper002.jpg') center center repeat-y fixed;
+    background-size: cover;
+}
+
+main {
+    background-color: white; /* Define a cor de fundo da área principal como branca */
+
+    max-width: 400px; /* Define a largura máxima da área principal como 400 pixels */
+
+    padding: 10px; /* Adiciona um espaço interno de 10 pixels em todos os lados do conteúdo */
+
+    margin: auto; /* Centraliza horizontalmente a área principal na página */
+
+    border-radius: 15px; /* Arredonda os cantos da caixa com raio de 15 pixels */
+
+    border: 1px solid darkblue; /* Define uma borda de 1 pixel, sólida e na cor azul escuro */
+}
     </style>
 </head>
 <body>

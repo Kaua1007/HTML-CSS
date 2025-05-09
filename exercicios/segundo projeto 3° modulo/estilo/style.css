@@ -1,8 +1,16 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display+SC&family=Sriracha&display=swap');
+
+:root{
+    --fonte1: "Playfair Display SC", serif;
+}
+
 *{
     margin: 0px;
     padding: 0px;
+    font-family: var(--fonte1);
+    font-size: 2.5vw;
 }
 
 html, body{
@@ -37,7 +45,8 @@ section.image{
 }
 
 .pimagem {
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.043);
     color: white;
 }
@@ -48,10 +57,6 @@ section{
     line-height: 2em;
     padding-left: 30px;
 }
-
-
-
-
 
 footer {
     text-align: center;

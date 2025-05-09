@@ -1,66 +1,97 @@
 @charset "UTF-8";
+/* Define a codificação de caracteres como UTF-8 para suportar acentuação e caracteres especiais */
 
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display+SC&family=Sriracha&display=swap');
+/* Importa fontes do Google Fonts para uso no site */
 
-:root{
-    --fonte1: "Playfair Display SC", serif;
+/* Criação de variáveis CSS globais */
+:root {
+    --fonte1: "Playfair Display SC", serif; /* Fonte personalizada usada no site */
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: var(--fonte1);
-    font-size: 2.5vw;
+/* Reset e estilo base para todos os elementos */
+* {
+    margin: 0px; /* Remove margem padrão de todos os elementos */
+    padding: 0px; /* Remove preenchimento padrão */
+    font-family: var(--fonte1); /* Define a fonte padrão como a variável criada */
+    font-size: 2.5vw; /* Tamanho da fonte relativo à largura da tela (responsivo) */
 }
 
-html, body{
-    min-height: 100vh;
-    background-color: darkgray;
+/* Estilo base do HTML e do corpo */
+html, body {
+    min-height: 100vh; /* Garante que ocupem pelo menos 100% da altura da tela */
+    background-color: darkgray; /* Define a cor de fundo padrão */
 }
 
-header{
-    background-color: black;
-    color: white;
-    text-align: center;
-    min-height: 100px;
+/* Estilo do cabeçalho */
+header {
+    background-color: black; /* Cor de fundo preta */
+    color: white; /* Cor do texto branca */
+    text-align: center; /* Centraliza o conteúdo */
+    min-height: 100px; /* Altura mínima do cabeçalho */
 }
 
-header > h1{
-    padding-top: 50px;
-    font-variant: small-caps;
+/* Estilo do título dentro do cabeçalho */
+header > h1 {
+    padding-top: 50px; /* Espaço acima do título */
+    font-variant: small-caps; /* Transforma o texto em pequenas maiúsculas */
 }
 
+/* Estilo do parágrafo dentro do cabeçalho */
 header > p {
-    padding-bottom: 50px;
+    padding-bottom: 50px; /* Espaço abaixo do parágrafo */
 }
 
-section.normal{
-    background-color: white;
-    color: black;
+/* Estilo para seções com fundo normal (branco) */
+section.normal {
+    background-color: white; /* Fundo branco */
+    color: black; /* Texto preto */
 }
 
-section.image{
-    background-color: rgb(34, 34, 34);
-    color: white;
+/* Estilo para seções com imagem de fundo */
+section.imagem {
+    background-color: rgb(34, 34, 34); /* Cor de fundo escura, caso a imagem não apareça */
+    text-shadow: 1px 1px 0px black; /* Sombra no texto para maior contraste */
+    box-shadow: 6px 6px 15px 0px rgb(0, 0, 0); /* Sombra da caixa (efeito 3D) */
+    background-attachment: fixed; /* Fundo fixo enquanto o conteúdo rola */
 }
 
+/* Estilo para os parágrafos sobre imagem */
 .pimagem {
-    display: inline-block;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.043);
-    color: white;
+    display: inline-block; /* Permite aplicar padding e background */
+    padding: 5px; /* Espaço interno */
+    background-color: rgba(0, 0, 0, 0.196); /* Fundo preto semitransparente */
+    color: white; /* Texto branco */
 }
 
-section{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
+/* Estilo geral das seções */
+section {
+    padding-top: 10vh; /* Espaço acima do conteúdo (10% da altura da tela) */
+    padding-bottom: 10vh; /* Espaço abaixo */
+    line-height: 2em; /* Altura entre linhas do texto */
+    padding-left: 30px; /* Espaço à esquerda do conteúdo */
 }
 
+/* Seção com imagem específica (foto01.png) */
+section#img01 {
+    background-image: url('../imagens/foto01.png'); /* Imagem de fundo */
+    background-position: right center; /* Posiciona a imagem à direita e centraliza verticalmente */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+}
+
+/* Outra seção com imagem diferente (foto03.png) */
+section#img02 {
+    background-image: url('../imagens/foto03.png'); /* Imagem de fundo */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-position: center center; /* Centraliza a imagem */
+    background-size: cover; /* A imagem cobre toda a seção */
+}
+
+/* Estilo do rodapé */
 footer {
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 10px;
+    text-align: center; /* Centraliza o conteúdo */
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
+    font-size: 0.4em; /* Fonte bem pequena */
+    padding: 1px; /* Pouco espaço interno */
 }

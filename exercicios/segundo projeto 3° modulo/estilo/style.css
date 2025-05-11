@@ -60,7 +60,7 @@ section.imagem {
 .pimagem {
     display: inline-block; /* Permite aplicar padding e background */
     padding: 5px; /* Espaço interno */
-    background-color: rgba(0, 0, 0, 0.196); /* Fundo preto semitransparente */
+    background-color: rgba(7, 7, 7, 0.338); /* Fundo preto semitransparente */
     color: white; /* Texto branco */
 }
 

@@ -63,6 +63,7 @@ nav{
     background-color: var(--rodapé);
     padding: 10px;
     text-align: center;
+    border-radius: 0 0 10px 10px;
 }
 
 nav > a{

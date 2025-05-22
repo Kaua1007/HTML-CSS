@@ -106,9 +106,13 @@ strong{
     padding: 2px 6px;
 }
 
-img{
-    width: 100%;
-}
+#img01{
+    max-width: 100%;
+    width: 300px; /* você pode trocar esse valor */
+    height: auto;
+    display: block;
+    margin: 5px auto; /* centraliza */
+  }
 
 iframe{
     margin: auto;

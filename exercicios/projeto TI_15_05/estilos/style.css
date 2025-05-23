@@ -15,7 +15,7 @@
     --rodapé:#0F172A;/* Fundo de navbar ou rodapé */
     --textosegundarios:	#64748B;/* Legendas, datas, autores */
 
-    --TítuloPrincipal: "Roboto Slab", serif; /* Título Principal / Manchetes */
+    --TítuloPrincipal: "Roboto Slab", sans-serif; /* Título Principal / Manchetes */
     --Textonotícias: font-family: "Roboto", sans-serif; /* Texto das notícias / corpo */
     --textomorderno: font-family: "Montserrat", sans-serif; /* Menu / Navegação / Cabeçalho e Rodapé */
 }
